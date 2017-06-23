@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+  </head>
+  <body>
+    <a-scene >
+      <a-entity id="sky" geometry="primitive:sphere;radius:5000" material="shader:gradient;topColor:235 235 245;bottomColor:185 185 210" scale="-1 1 1" position="0 0 0" rotation="0 0 0" visible="true"></a-entity>
+
+      <a-entity id="light" light="type:ambient;color:#888" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+      <a-assets>
+        <a-asset-item id="iss" src="ISS.obj" position="-7.160 0 0"></a-asset-item>
+      </a-assets>
+      <a-sphere color="blue" radius="5"></a-sphere>
+      <a-entity obj-model="obj:#iss" position="5.551 0 -5.98" rotation="0 0 0" scale="1 1 1" visible="true" material=""></a-entity>
+    <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="2560" height="1278" style="width: 1164px; height: 581px;"></canvas><a-entity camera="far:10000;fov:50;near:0.05;active:true" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity></a-scene>
+  </body>
+</html>
